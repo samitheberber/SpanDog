@@ -1,7 +1,11 @@
 import lejos.nxt.Button;
 
+import models.Dog;
+
 public class SpanDog{
+
     public static void main (String[] args) {
-        System.out.println("Moooi"); Button.ENTER.waitForPressAndRelease(); 
+        Dog dog = new Dog();
     } 
+
 }
