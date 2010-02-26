@@ -1,11 +1,10 @@
-import lejos.nxt.Button;
-
 import models.Dog;
+import ui.SpanUi;
 
 public class SpanDog{
 
     public static void main (String[] args) {
-        Dog dog = new Dog();
+        (new SpanUi(new Dog())).start();
     } 
 
 }
