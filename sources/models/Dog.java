@@ -11,6 +11,7 @@ public class Dog {
     private double tiredness;
     private Memory memory;
     private int lastAction;
+    private long lastActionTime;
 
     public Dog() {
         this.feelings = 1.0;
@@ -22,12 +23,28 @@ public class Dog {
     public int getItem(int color) {
         Item item = this.memory.getItem(color);
         this.lastAction = this.actionCalculus(item);
+        this.lastActionTime = System.currentTimeMillis();
         return this.lastAction;
     }
 
+    public long whenWasLastAction() {
+        return this.lastActionTime;
+    }
+
+    public void grant() {
+        Item item = this.memory.getLastItem();
+        if (item != null)
+            item.grant(this.lastAction);
+    }
+
+    public void blame() {
+        Item item = this.memory.getLastItem();
+        if (item != null)
+            item.blame(this.lastAction);
+    }
+
     private int actionCalculus(Item item) {
-        double avg = (item.getEatable() + item.getPlayable() + item.getIgnorable()) / 3;
-        return EATING;
+        return item.doMostFavourAction();
     }
 
 }

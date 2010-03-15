@@ -1,6 +1,6 @@
 <project name="SpanDog" default="uploadandrun">
     <description>
-    Project SpanDog build file
+        Project SpanDog build file
     </description>
 
     <!-- set properties for this build -->
