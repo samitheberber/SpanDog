@@ -1,8 +1,12 @@
-package ui.actions;
+package spandog.ui.actions;
 
 import java.io.File;
 import lejos.nxt.Sound;
 
+/**
+ * This class contains all actions, which belongs to eating.
+ * @author Sami Saada
+ */
 public class Eating {
     public static void doAction() {
         System.out.println("Om-nom-nom");

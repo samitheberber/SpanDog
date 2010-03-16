@@ -1,13 +1,17 @@
-package ui;
+package spandog.ui;
 
 import lejos.nxt.Button;
 import lejos.nxt.LCD;
 import lejos.robotics.subsumption.*;
 import lejos.robotics.navigation.*;
 import lejos.nxt.Motor;
-import models.Dog;
-import ui.behaviors.*;
+import spandog.models.Dog;
+import spandog.ui.behaviors.*;
 
+/**
+ * This class is the main user interface.
+ * @author Sami Saada
+ */
 public class SpanUi {
 
     private Dog dog;

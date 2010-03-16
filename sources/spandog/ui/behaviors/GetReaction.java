@@ -1,10 +1,14 @@
-package ui.behaviors;
+package spandog.ui.behaviors;
 
 import lejos.robotics.subsumption.Behavior;
 import lejos.robotics.navigation.Pilot;
 import lejos.nxt.*;
-import models.Dog;
+import spandog.models.Dog;
 
+/**
+ * This class handles all reaction behaviors.
+ * @author Sami Saada
+ */
 public class GetReaction implements Behavior {
 
     private static boolean slapped = false;
@@ -19,6 +23,9 @@ public class GetReaction implements Behavior {
         SensorPort.S4.addSensorPortListener(new ShoutListener(this.dog));
     }
 
+    /**
+     * This class listens of slap.
+     */
     class SlapListener implements SensorPortListener {
 
         private Dog dog;
@@ -40,6 +47,9 @@ public class GetReaction implements Behavior {
 
     }
 
+    /**
+     * This class listens of shout.
+     */
     class ShoutListener implements SensorPortListener {
 
         private Dog dog;

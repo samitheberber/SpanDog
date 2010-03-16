@@ -1,12 +1,36 @@
-package models;
+package spandog.models;
 
+/**
+ * This class represents an item, which contains the main interface, how items
+ * are modelled.
+ * @author Sami Saada
+ */
 public class Item {
 
+    /**
+     * Color of item.
+     */
     private int color;
+    /**
+     * Should eat this?
+     * @see #getEatable()
+     */
     private double eatable;
+    /**
+     * Should play with this?
+     * @see #getPlayable()
+     */
     private double playable;
+    /**
+     * Should ignore this?
+     * @see #getIgnorable()
+     */
     private double ignorable;
 
+    /**
+     * Creates new item.
+     * @param color Color of item.
+     */
     public Item(int color) {
         this.color = color;
         this.eatable = 1.0;
@@ -14,14 +38,26 @@ public class Item {
         this.ignorable = 1.0;
     }
 
+    /**
+     * Gives eatable value.
+     * @return Eatable value.
+     */
     public double getEatable() {
         return this.eatable;
     }
 
+    /**
+     * Gives playable value.
+     * @return Playable value.
+     */
     public double getPlayable() {
         return this.playable;
     }
 
+    /**
+     * Gives ignorable value.
+     * @return Ignorable value.
+     */
     public double getIgnorable() {
         return this.ignorable;
     }
@@ -62,21 +98,35 @@ public class Item {
     }
 
     public void grant(int action) {
-        if (action == 0)
+        if (action == 0) {
             this.eatable *= 1.25;
-        else if (action == 1)
+            this.playable *= 0.75;
+            this.ignorable *= 0.75;
+        } else if (action == 1) {
+            this.eatable *= 0.75;
             this.playable *= 1.25;
-        else
+            this.ignorable *= 0.75;
+        } else {
+            this.eatable *= 0.75;
+            this.playable *= 0.75;
             this.ignorable *= 1.25;
+        }
     }
 
     public void blame(int action) {
-        if (action == 0)
+        if (action == 0) {
             this.eatable *= 0.75;
-        else if (action == 1)
+            this.playable *= 1.25;
+            this.ignorable *= 1.25;
+        } else if (action == 1) {
+            this.eatable *= 1.25;
             this.playable *= 0.75;
-        else
+            this.ignorable *= 1.25;
+        } else {
+            this.eatable *= 1.25;
+            this.playable *= 1.25;
             this.ignorable *= 0.75;
+        }
     }
 
     private void raiseEatable() {

@@ -1,10 +1,14 @@
-package ui.behaviors;
+package spandog.ui.behaviors;
 
 import lejos.robotics.subsumption.Behavior;
 import lejos.robotics.navigation.Pilot;
 import java.util.Random;
-import ui.actions.Barking;
+import spandog.ui.actions.Barking;
 
+/**
+ * This class implements the moving behavior.
+ * @author Sami Saada
+ */
 public class MoveAround implements Behavior {
 
     private Pilot legs;

@@ -1,11 +1,15 @@
-package ui.behaviors;
+package spandog.ui.behaviors;
 
 import lejos.robotics.subsumption.Behavior;
 import lejos.robotics.navigation.*;
 import lejos.nxt.*;
-import ui.actions.Eating;
-import models.Dog;
+import spandog.ui.actions.Eating;
+import spandog.models.Dog;
 
+/**
+ * This class implements the sensing behavior.
+ * @author Sami Saada
+ */
 public class SenseItem implements Behavior {
 
     private Dog dog;

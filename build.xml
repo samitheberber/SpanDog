@@ -7,9 +7,10 @@
     <property file="project.properties"/>
     <property name="sources.dir" location="sources"/>
     <property name="builds.dir" location="builds"/>
+    <property name="docs.dir" location="docs"/>
     <property name="classes.dir" location="${builds.dir}/classes"/>
     <property name="nxt.dir" location="${builds.dir}/nxt"/>
-    <basename property="program" file="SpanDog"/>
+    <basename property="program" file="spandog.SpanDog"/>
     <property name="binary" value="builds/nxt/${program}.nxj" />
 	
     <!-- deletes class files -->
@@ -81,6 +82,14 @@
                 <pathelement location="${nxj.bluecove-gpl.jar}"/>
             </classpath>
         </java>
+    </target>
+
+    <target name="javadoc">
+        <javadoc sourcepath="${sources.dir}" destdir="${docs.dir}/javadoc" packagenames="spandog.*" doctitle="SpanDog API Documentation" bottom="SpanDog API Documentation - Copyright 2010 Sami Saada" header="SpanDog API Documentation - Copyright 2010 Sami Saada" footer="SpanDog API Documentation - Copyright 2010 Sami Saada">
+            <bootclasspath>
+                <pathelement location="${nxj.classes.jar}"/>
+            </bootclasspath>
+        </javadoc>
     </target>
 
 </project>

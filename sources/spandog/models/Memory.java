@@ -1,7 +1,12 @@
-package models;
+package spandog.models;
 
 import java.util.ArrayList;
 
+/**
+ * This class represents the memory of dog. It contains items, which dog has
+ * faced on its journies.
+ * @author Sami Saada
+ */
 public class Memory {
 
     private ArrayList<Item> items;
