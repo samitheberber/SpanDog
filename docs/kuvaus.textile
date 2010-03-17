@@ -1,0 +1,13 @@
+h1. SpanDog
+
+h2. Sisältö
+
+* Millä periaatteella robotti toimii
+* Miten robottia ohjaava koodi on rakentunut
+** Toteutettujen toimintojen/luokkien tarkoitus 
+* Miten robotti voidaan rakentaa (kuvia ja neuvoja)
+* Miksi robotti on rakennettu juuri näin
+* Mitä osia/tarvikkeita robottiin on käytetty
+* Kuinka hyvin robotti suoriutuu tehtävästään
+* Mitä rajoituksia robotilla on
+* Mitä robotissa voisi parantaa. 
