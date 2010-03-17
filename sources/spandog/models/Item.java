@@ -62,33 +62,47 @@ public class Item {
         return this.ignorable;
     }
 
+    /**
+     * Does the most favour action.
+     * @return Action number.
+     */
     public int doMostFavourAction() {
         if (this.eatable > this.playable && this.eatable > this.ignorable) {
-            this.raiseEatable();
+            this.raiseEatable(1.1, 0.9);
             return 0;
         } else if (this.playable > this.eatable && this.playable > this.ignorable) {
-            this.raisePlayable();
+            this.raisePlayable(1.1, 0.9);
             return 1;
         } else if (this.ignorable > this.eatable && this.ignorable > this.playable) {
-            this.raiseIgnorable();
+            this.raiseIgnorable(1.1, 0.9);
             return 2;
         } else {
             int random = (int) (Math.random()*3);
             if (random == 0) {
-                this.raiseEatable();
+                this.raiseEatable(1.1, 0.9);
             } else if (random == 1) {
-                this.raisePlayable();
+                this.raisePlayable(1.1, 0.9);
             } else {
-                this.raiseIgnorable();
+                this.raiseIgnorable(1.1, 0.9);
             }
             return random;
         }
     }
 
+    /**
+     * Gives color of item.
+     * @return Color code.
+     */
     public int getColor() {
         return this.color;
     }
 
+    /**
+     * Equals method, which is used in ArrayList's contains method.
+     * @see java.util.ArrayList
+     * @param other Compared object.
+     * @return Boolean value for matching.
+     */
     public boolean equals(Object other) {
         int otherColor = ((Item) other).getColor();
         int distance = this.getColor() - otherColor;
@@ -97,22 +111,24 @@ public class Item {
         return distance < 20;
     }
 
+    /**
+     * Grants item by certain action.
+     * @param action Action number
+     */
     public void grant(int action) {
         if (action == 0) {
-            this.eatable *= 1.25;
-            this.playable *= 0.75;
-            this.ignorable *= 0.75;
+            this.raiseEatable(1.25, 0.75);
         } else if (action == 1) {
-            this.eatable *= 0.75;
-            this.playable *= 1.25;
-            this.ignorable *= 0.75;
+            this.raisePlayable(1.25, 0.75);
         } else {
-            this.eatable *= 0.75;
-            this.playable *= 0.75;
-            this.ignorable *= 1.25;
+            this.raiseIgnorable(1.25, 0.75);
         }
     }
 
+    /**
+     * Blames item by certain action.
+     * @param action Action number
+     */
     public void blame(int action) {
         if (action == 0) {
             this.eatable *= 0.75;
@@ -129,22 +145,37 @@ public class Item {
         }
     }
 
-    private void raiseEatable() {
-        this.eatable *= 1.1;
-        this.playable *= 0.9;
-        this.ignorable *= 0.9;
+    /**
+     * Raises eatable value and lowers others.
+     * @param higher Eatable value
+     * @param lower Others value
+     */
+    private void raiseEatable(double higher, double lower) {
+        this.eatable *= higher;
+        this.playable *= lower;
+        this.ignorable *= lower;
     }
 
-    private void raisePlayable() {
-        this.eatable *= 0.9;
-        this.playable *= 1.1;
-        this.ignorable *= 0.9;
+    /**
+     * Raises playable value and lowers others.
+     * @param higher Playable value
+     * @param lower Others value
+     */
+    private void raisePlayable(double higher, double lower) {
+        this.eatable *= lower;
+        this.playable *= higher;
+        this.ignorable *= lower;
     }
 
-    private void raiseIgnorable() {
-        this.eatable *= 0.9;
-        this.playable *= 0.9;
-        this.ignorable *= 1.1;
+    /**
+     * Raises ignorable value and lowers others.
+     * @param higher Ignorable value
+     * @param lower Others value
+     */
+    private void raiseIgnorable(double higher, double lower) {
+        this.eatable *= lower;
+        this.playable *= lower;
+        this.ignorable *= higher;
     }
 
 }

@@ -8,9 +8,14 @@ import lejos.nxt.Sound;
  * @author Sami Saada
  */
 public class Eating {
+
+    /**
+     * Does the main eating action.
+     */
     public static void doAction() {
         System.out.println("Om-nom-nom");
         Sound.playSample(new File("omnomnom_8bit.wav"));
         try{Thread.sleep(2000);} catch (Exception e) {}
     }
+
 }

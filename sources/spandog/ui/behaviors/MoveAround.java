@@ -11,27 +11,50 @@ import spandog.ui.actions.Barking;
  */
 public class MoveAround implements Behavior {
 
+    /**
+     * Legs of the dog.
+     */
     private Pilot legs;
+    /**
+     * Random number generator.
+     */
     private Random gen;
 
+    /**
+     * Creates moving behavior.
+     * @param legs Legs of the dog
+     */
     public MoveAround(Pilot legs) {
         this.legs = legs;
         this.gen = new Random();
     }
 
+    /**
+     * Checks if the behavior takes control.
+     * @return Boolean for taking control
+     */
     public boolean takeControl() {
         return true;
     }
 
+    /**
+     * Action of behavior.
+     */
     public void action() {
         this.move();
         Barking.doAction();
     }
 
+    /**
+     * If the action should stop, arbitrator does this.
+     */
     public void suppress() {
         this.legs.stop();
     }
 
+    /**
+     * The movement action, which selects the style of movement.
+     */
     private void move() {
         int style = gen.nextInt(4);
 
