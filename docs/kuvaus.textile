@@ -1,5 +1,7 @@
 h1. SpanDog
 
+Lego NXT robot dog
+
 h2. Sisältö
 
 * Millä periaatteella robotti toimii
@@ -11,3 +13,69 @@ h2. Sisältö
 * Kuinka hyvin robotti suoriutuu tehtävästään
 * Mitä rajoituksia robotilla on
 * Mitä robotissa voisi parantaa. 
+
+h2. Millä periaatteella robotti toimii
+
+Robotti toimii sen sensoreihin perustuvan käyttöliittymän avulla. Ympäristön
+vaikutus laukaisee robotissa erilaisia toimintamalleja.
+
+h2. Miten robottia ohjaava koodi on rakentunut
+
+Robotin koodi koostuu koiraa mallintavista koodista ja käyttöliittymää
+mallintavasta koodista.
+
+h3. Toteutettujen toimintojen/luokkien tarkoitus 
+
+h4. spandog-paketti
+
+Paketti sisältää SpanDog-luokan, joka käynnistää sovelluksen.
+
+h4. spandog.models-paketti
+
+Paketti sisältää koiraa mallintavat luokat, koiran, koiran muistin ja koiran
+muistissa olevien esineiden mallit.
+
+h4. spandog.ui-paketti
+
+Paketti sisältää käyttöliittymää mallintavat luokat, joiden pääluokkana toimii
+SpanUI, jonka SpanDog-luokka käynnistää.
+
+h4. spandog.ui.actions-paketti
+
+Paketti sisältää erilaiset toiminnot, kuten haukkumisen ja syömisen.
+
+h4. spandog.ui.behaviors-paketti
+
+Paketti sisältää erilaiset koiran käyttäytymismallit.
+
+h2. Miten robotti voidaan rakentaa (kuvia ja neuvoja)
+
+Koiran voi rakentaa miten haluaa, kunhan käytetyt sensorit ovat oikeissa
+porteissa ja pyörät pyörivät vastakkaiseen suuntaan.
+
+h2. Miksi robotti on rakennettu juuri näin
+
+Kasaamani malli oli kohtuu vaivaton ja nopea rakentaa, mutta siinä on myös omia
+vikojaan. Esim. joidenkin sensoreiden tarkkuus on heikko nykyisissä asennoista.
+
+h2. Mitä osia/tarvikkeita robottiin on käytetty
+
+Robottiin on käytetty paketista löytyviä osia sekä pehmolelukoiraa. Kolmatta
+moottoria ei ole käytetty, mutta kaikki sensorit ovat käytössä.
+
+h2. Kuinka hyvin robotti suoriutuu tehtävästään
+
+Robotilla on välillä joitain oppimisvaikeuksia, mutta välillä se kokeilee jotain
+muutakin toiminnallisuutta kuin esim. syödä jalkaa. Enimmäkseen se osaa liikkua
+paikasta toiseen vahingoittumatta ja tehden temppujaan.
+
+h2. Mitä rajoituksia robotilla on
+
+Robotti vaatii ihmisen läsnäoloa, jotta se ei tee mitään typerää, aivan kuten
+koiranpentu, se vaatii huolenpitoa.
+
+h2. Mitä robotissa voisi parantaa. 
+
+Robottiin voisi lisätä joitain parempia mallinnuksia ja liikeratoja.
+Tarkoituksena oli mallintaa esim. ruuan tarvetta ja väsymystä, mutta ne
+unohtuivat jossain toteutuksen tiimellyksessä.

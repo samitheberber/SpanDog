@@ -1,9 +1,30 @@
 == Project SpanDog ==
 
-Download and extract lejos_nxj folder on lejos folder.
+Course project in University of Helsinki.
 
 = Sounds =
 
 Sounds are ripped from youtube and edited with audacity:
 http://www.youtube.com/watch?v=SMWi7CLoZ2Q
 http://www.youtube.com/watch?v=tSnp5igvnqg
+
+= Installing =
+
+Download and extract lejos_nxj folder on lejos folder.
+
+= Running =
+
+To run program in Lego NXT robot, just plug in the robot with USB and run: ant
+
+Bluetooth should work as well, but I haven't test it.
+
+= Documentation =
+
+Mostly of course required documentation are in Finnish on Finnish names in
+docs-directory.
+
+To generate javadoc-documents, run: ant javadoc
+
+= License =
+
+Check COPYING-file for license information.
