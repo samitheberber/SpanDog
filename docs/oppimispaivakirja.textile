@@ -1,0 +1,61 @@
+h1. Oppimispäiväkirja
+
+Viikot ovat kalenteriviikkoja.
+
+h2. Viikko 3
+
+Sain robotin haltuuni ja totesin oleellisten osien olevan tallessa. En
+tutustunut pakettiin sen kummemmin, sillä se oli tuttu viime kevään kurssista.
+
+h2. Viikko 4
+
+Kuuntelin tapaamisessa erilaisia ideoita ja mietiskelin mahdollista omaa ideaa.
+
+h2. Viikko 5
+
+Tutustuin legon suunnittelutyökaluun ja koitin sillä piirrellä joitain malleja.
+Winen avulla käyttäessä ilmeni vieritys-bugi, joka teki käytön hieman
+ärsyttäväksi lukuisten kaatumisten takia. Tietenkään en aina suurten muutosten
+jälkeen muistanut tallentaa luonnosta.
+
+Päädyin lopulta rakentelemaan palikoista erilaisia moottoriajoneuvoja netistä
+löytyneiden ohjeiden avulla.
+
+h2. Viikot 6 ja 7
+
+En saanut kaiketi mitään aikaseksi kurssin eteen, ainoastaan mietittyä
+mahdollista aihetta.
+
+h2. Viikko 8
+
+Varsinaisen idean tullessa demoa edeltävänä päivänä ei voi olettaa robon olevan
+valmis demossa. Rakentaminen sujui mallikkaasti, tosin joitain ei niin kestäviä
+ratkaisuja ilmeni. Ohjeitta rakentaminen ei ole koskaan ollut minulla vanha
+puoli legojen kanssa. Kuitenkin sain minimalistisen, tai ainakin kohtuu
+sellaisen, kyhättyä kasaan.
+
+Demopäivänä sain varmistettua yhteyden toimimattomuuden ja palikka päivitettiin
+toisen koneen avulla, mutta varsinaista koodia ei ollut vielä syntynyt malleja
+lukuunottamatta.
+
+h2. Viikko 9
+
+Oivalsin, ettei yhdistämisongelmat johtuneetkaan käyttöjärjestelmästäni vaan
+siitä, etten ollut kääntänyt NXT:n yhdistämiskirjastoja. Alunperin tämän
+käännöksen puuttuminen johtui kääntövirheestä, mutta eihän lejosin C-kirjastot
+voi kääntyä, jos hakemistopolussa on jonkin hakemiston nimessä välilyönti.
+
+h2. Viikko 10
+
+Totesin työn myöhästyvät joidenkin kriittisempien määräaikojen takia.
+
+h2. Viikko 11
+
+Behavior-rajapinta ei olekkaan niin rikkoontuva kuin vuosi sitten ajattelin.
+Tarvitsi vain hieman kärsivällisyyttä, niin homma hoitui leikiten. Joitain
+ominaisuuksia jouduin muuttamaan teknisten yksityiskohtien tieltä. Äänitiedostot
+sain kätevästi robon tiedostojärjestelmään.
+
+Opin mukavan tavan liittää javadoc-generoinnin ANTin build.xml-tiedostossa.
+
+Toivottavasti opin palauttamaan työ ajoissa seuraavia projekteja ajatellen.
